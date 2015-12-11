@@ -1,0 +1,61 @@
+$git init
+$git status 
+Modifier ou créer un ou plusieur fichiers
+$git status
+$git diff
+$git diff --word-diff //regarde les mots qui ont changer et non pas les lignes.
+$git add fichier... //enregistrer dans l'index 
+$git status //verification
+$git diff
+$git diff --cached // difference entre l'indexe et le depot 
+$git commit //démarre un éditeur pour entrer le messag de commit(éditeur par defaut (vi ou nano) ou celui spécifié par la variable d'environnement EDITOR)
+
+Variante:
+$git commit -m "Message..."  //quand le message est court 
+$git commit  "Fichier" //evite de faire le add, qui existe dans le depot
+$git commit  -a //evite de faire le add, qui existe dans le depot
+
+$git status
+
+REVOIR LES COMMITS:
+$git show
+$git log
+$git log -p
+$git log --stat --summary
+$git log --oneline
+$gitk
+
+-> Envoyer les modifs -> distant
+$git push
+
+
+-> Recevoir les modif
+$git fetch
+
+Appliquer les derniers commit obtenus par git fetch
+git merge
+
+En pratique utiliser
+$git pull (fetch+merge)
+
+
+-> Conclusion pour faire des modification il faut:
+$git add
+$git commit
+$git pull
+$git push
+
+-> Ajout/Suppression de fichier
+$git add fichier...
+$git rm fichier...
+$git mv source destination //deplacer ou renomer un fichier
+Ensuite faire un $git commit
+
+
+Initialisation d'un dépot
+$mkdir projet
+$cd projet
+$git init
+
+Integrer changement d'un autre depot
+$$git pull <url> <branche>
